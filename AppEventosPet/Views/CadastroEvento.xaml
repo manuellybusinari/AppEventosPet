@@ -8,7 +8,7 @@
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="15">
 
-            <Label Text="Cadastro de Evento" 
+            <Label Text="Cadastro de Evento Pets" 
                    FontSize="26"
                    FontAttributes="Bold"
                    HorizontalOptions="Center"/>
