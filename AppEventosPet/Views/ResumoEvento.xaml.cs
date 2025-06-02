@@ -4,14 +4,12 @@ namespace AppEventosPet.Views;
 
 public partial class ResumoEvento : ContentPage
 {
+    public Evento Evento { get; set; }
+
     public ResumoEvento(Evento evento)
     {
         InitializeComponent();
-        BindingContext = evento;
-    }
-
-    private async void OnVoltarClicked(object sender, EventArgs e)
-    {
-        await Navigation.PopAsync();
+        Evento = evento;
+        BindingContext = Evento;
     }
 }

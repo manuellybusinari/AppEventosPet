@@ -23,7 +23,10 @@ public partial class CadastroEvento : ContentPage
             "São Paulo", "Rio de Janeiro", "Curitiba", "Belo Horizonte", "Porto Alegre"
         };
 
-        Evento = new Evento();
+        Evento = new Evento
+        {
+            CustoPorParticipante = 100 // Definindo custo fixo
+        };
 
         BindingContext = this;
     }
@@ -33,7 +36,6 @@ public partial class CadastroEvento : ContentPage
         if (string.IsNullOrWhiteSpace(Evento.Nome) ||
             string.IsNullOrWhiteSpace(Evento.Cidade) ||
             string.IsNullOrWhiteSpace(Evento.Tipo) ||
-            Evento.CustoPorParticipante <= 0 ||
             Evento.DataTermino < Evento.DataInicio)
         {
             await DisplayAlert("Erro", "Preencha todos os campos corretamente.", "OK");

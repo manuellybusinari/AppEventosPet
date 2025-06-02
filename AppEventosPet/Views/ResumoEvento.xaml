@@ -9,24 +9,21 @@
         <VerticalStackLayout Padding="20" Spacing="15">
 
             <Label Text="Resumo do Evento"
-                   FontSize="28"
-                   HorizontalOptions="Center"
-                   FontAttributes="Bold"/>
+                   FontSize="26"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"/>
 
-            <Label Text="Tipo de Evento: {Binding Tipo}"/>
-            <Label Text="Nome: {Binding Nome}"/>
-            <Label Text="Cidade: {Binding Cidade}"/>
-            <Label Text="Data de Início: {Binding DataInicio, StringFormat='{0:dd/MM/yyyy}'}"/>
-            <Label Text="Data de Término: {Binding DataTermino, StringFormat='{0:dd/MM/yyyy}'}"/>
-            <Label Text="Duração: {Binding DuracaoEmDias} dias"/>
-            <Label Text="Número de Participantes: {Binding NumeroParticipantes}"/>
-            <Label Text="Custo por Participante: R$ {Binding CustoPorParticipante}"/>
-            <Label Text="Custo Total: R$ {Binding CustoTotal}"/>
-
-            <Button Text="Voltar"
-                    Clicked="OnVoltarClicked"
-                    BackgroundColor="#007ACC"
-                    TextColor="White"/>
+            <Label Text="{Binding Nome, StringFormat='Nome da Pessoa: {0}'}"/>
+            <Label Text="{Binding Tipo, StringFormat='Tipo de Evento: {0}'}"/>
+            <Label Text="{Binding Cidade, StringFormat='Cidade: {0}'}"/>
+            <Label Text="{Binding DataInicio, StringFormat='Data de Início: {0:dd/MM/yyyy}'}"/>
+            <Label Text="{Binding DataTermino, StringFormat='Data de Término: {0:dd/MM/yyyy}'}"/>
+            <Label Text="{Binding NumeroParticipantes, StringFormat='Participantes: {0}'}"/>
+            <Label Text="{Binding CustoPorParticipante, StringFormat='Custo por Participante: R$ {0:F2}'}"/>
+            <Label Text="{Binding DuracaoEmDias, StringFormat='Duração: {0} dia(s)'}"/>
+            <Label Text="{Binding CustoTotal, StringFormat='Custo Total: R$ {0:F2}'}"
+                   FontAttributes="Bold"
+                   TextColor="DarkRed"/>
 
         </VerticalStackLayout>
     </ScrollView>

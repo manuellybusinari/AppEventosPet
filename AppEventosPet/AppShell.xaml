@@ -5,6 +5,7 @@
     xmlns:views="clr-namespace:AppEventosPet.Views"
     x:Class="AppEventosPet.AppShell">
 
-    <ShellContent Title="Cadastro de Evento"
-                  ContentTemplate="{DataTemplate views:CadastroEvento}"/>
+    <ShellContent
+        Title="Cadastro"
+        ContentTemplate="{DataTemplate views:CadastroEvento}" />
 </Shell>
