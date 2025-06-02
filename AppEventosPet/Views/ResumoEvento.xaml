@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AppEventosPet.Views.ResumoEvento"
+    Title="Resumo do Evento">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="Resumo do Evento"
+                   FontSize="28"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold"/>
+
+            <Label Text="Tipo de Evento: {Binding Tipo}"/>
+            <Label Text="Nome: {Binding Nome}"/>
+            <Label Text="Cidade: {Binding Cidade}"/>
+            <Label Text="Data de Início: {Binding DataInicio, StringFormat='{0:dd/MM/yyyy}'}"/>
+            <Label Text="Data de Término: {Binding DataTermino, StringFormat='{0:dd/MM/yyyy}'}"/>
+            <Label Text="Duração: {Binding DuracaoEmDias} dias"/>
+            <Label Text="Número de Participantes: {Binding NumeroParticipantes}"/>
+            <Label Text="Custo por Participante: R$ {Binding CustoPorParticipante}"/>
+            <Label Text="Custo Total: R$ {Binding CustoTotal}"/>
+
+            <Button Text="Voltar"
+                    Clicked="OnVoltarClicked"
+                    BackgroundColor="#007ACC"
+                    TextColor="White"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
