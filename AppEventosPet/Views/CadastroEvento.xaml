@@ -2,7 +2,7 @@
 <ContentPage 
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="AppEventospet.Views.CadastroEvento"
+    x:Class="AppEventosPet.Views.CadastroEvento"
     Title="Cadastro de Evento">
 
     <ScrollView>
