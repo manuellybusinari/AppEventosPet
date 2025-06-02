@@ -3,57 +3,94 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="AppEventosPet.Views.CadastroEvento"
-    Title="Cadastro de Evento">
+    BackgroundColor="#F9F5F0"
+    NavigationPage.HasNavigationBar="False">
 
     <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="15">
+        <VerticalStackLayout Padding="20" Spacing="20">
 
-            <Label Text="Cadastro de Evento Pets" 
-                   FontSize="26"
-                   FontAttributes="Bold"
-                   HorizontalOptions="Center"/>
+            <Frame BackgroundColor="#FFF8F2" CornerRadius="20" Padding="15" HasShadow="True">
+                <Label Text="Cadastro de Evento Pet" 
+                       FontSize="28"
+                       FontAttributes="Bold"
+                       TextColor="#5C4033"
+                       HorizontalOptions="Center"/>
+            </Frame>
 
-            <Label Text="Nome da Pessoa"/>
-            <Entry Placeholder="Digite seu nome"
-                   Text="{Binding Evento.Nome}"/>
+            <!-- Nome -->
+            <Frame BackgroundColor="White" CornerRadius="15" Padding="10">
+                <VerticalStackLayout>
+                    <Label Text="Nome da Pessoa" TextColor="#5C4033"/>
+                    <Entry Placeholder="Digite seu nome" Text="{Binding Evento.Nome}"/>
+                </VerticalStackLayout>
+            </Frame>
+            
+            
 
-            <Label Text="Tipo de Evento"/>
-            <Picker Title="Selecione o Evento"
-                    ItemsSource="{Binding TiposEvento}"
-                    SelectedItem="{Binding Evento.Tipo}"/>
+            <!-- Tipo de Evento -->
+            <Frame BackgroundColor="White" CornerRadius="15" Padding="10">
+                <VerticalStackLayout>
+                    <Label Text="Tipo de Evento" TextColor="#5C4033"/>
+                    <Picker Title="Selecione o Evento"
+                            ItemsSource="{Binding TiposEvento}"
+                            SelectedItem="{Binding Evento.Tipo}"/>
+                </VerticalStackLayout>
+            </Frame>
 
-            <Label Text="Cidade"/>
-            <Picker Title="Selecione o Estado"
-                    ItemsSource="{Binding Cidades}"
-                    SelectedItem="{Binding Evento.Cidade}"/>
+            <!-- Cidade -->
+            <Frame BackgroundColor="White" CornerRadius="15" Padding="10">
+                <VerticalStackLayout>
+                    <Label Text="Cidade" TextColor="#5C4033"/>
+                    <Picker Title="Selecione a Cidade"
+                            ItemsSource="{Binding Cidades}"
+                            SelectedItem="{Binding Evento.Cidade}"/>
+                </VerticalStackLayout>
+            </Frame>
 
-            <Label Text="Data de Início"/>
-            <DatePicker Date="{Binding Evento.DataInicio}"
-                        Format="dd/MM/yyyy"/>
-
-            <Label Text="Data de Término"/>
-            <DatePicker Date="{Binding Evento.DataTermino}"
-                        Format="dd/MM/yyyy"/>
-
-            <Label Text="Número de Participantes"/>
-            <HorizontalStackLayout>
-                <Stepper Minimum="1"
-                         Maximum="500"
-                         Increment="1"
-                         Value="{Binding Evento.NumeroParticipantes}"/>
-                <Label Text="{Binding Evento.NumeroParticipantes}"
-                       FontSize="18"
-                       VerticalOptions="Center"/>
+            <!-- Datas -->
+            <HorizontalStackLayout Spacing="10">
+                <Frame BackgroundColor="White" CornerRadius="15" Padding="10" WidthRequest="160">
+                    <VerticalStackLayout>
+                        <Label Text="Data de Início" TextColor="#5C4033"/>
+                        <DatePicker Date="{Binding Evento.DataInicio}" Format="dd/MM/yyyy"/>
+                    </VerticalStackLayout>
+                </Frame>
+                <Frame BackgroundColor="White" CornerRadius="15" Padding="10" WidthRequest="160">
+                    <VerticalStackLayout>
+                        <Label Text="Data de Término" TextColor="#5C4033"/>
+                        <DatePicker Date="{Binding Evento.DataTermino}" Format="dd/MM/yyyy"/>
+                    </VerticalStackLayout>
+                </Frame>
             </HorizontalStackLayout>
 
-            <Label Text="Custo por Participante: R$ 100,00"
-                   FontAttributes="Bold"
-                   TextColor="DarkGreen"/>
+            <!-- Participantes -->
+            <Frame BackgroundColor="White" CornerRadius="15" Padding="10">
+                <VerticalStackLayout>
+                    <Label Text="Número de Participantes" TextColor="#5C4033"/>
+                    <HorizontalStackLayout Spacing="10">
+                        <Stepper Minimum="1" Maximum="500" Increment="1" Value="{Binding Evento.NumeroParticipantes}"/>
+                        <Label Text="{Binding Evento.NumeroParticipantes}" 
+                               FontSize="18" 
+                               VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
 
+            <!-- Custo -->
+            <Frame BackgroundColor="#FFF8F2" CornerRadius="15" Padding="10">
+                <Label Text="Custo por Participante: R$ 100,00" 
+                       FontAttributes="Bold"
+                       TextColor="DarkGreen"
+                       HorizontalOptions="Center"/>
+            </Frame>
+
+            <!-- Botão -->
             <Button Text="Cadastrar Evento"
                     Clicked="OnCadastrarClicked"
-                    BackgroundColor="#007ACC"
-                    TextColor="White"/>
+                    BackgroundColor="#5C4033"
+                    TextColor="White"
+                    CornerRadius="15"
+                    HeightRequest="50"/>
 
         </VerticalStackLayout>
     </ScrollView>

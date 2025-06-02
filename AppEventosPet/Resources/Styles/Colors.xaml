@@ -35,6 +35,8 @@
     <SolidColorBrush x:Key="BlackBrush" Color="{StaticResource Black}"/>
 
     <SolidColorBrush x:Key="Gray100Brush" Color="{StaticResource Gray100}"/>
+    <SolidColorBrush x:Key="DarkGolden" Color="{StaticResource DarkGolden}"/>
+
     <SolidColorBrush x:Key="Gray200Brush" Color="{StaticResource Gray200}"/>
     <SolidColorBrush x:Key="Gray300Brush" Color="{StaticResource Gray300}"/>
     <SolidColorBrush x:Key="Gray400Brush" Color="{StaticResource Gray400}"/>

@@ -12,4 +12,5 @@ public partial class ResumoEvento : ContentPage
         Evento = evento;
         BindingContext = Evento;
     }
+
 }
